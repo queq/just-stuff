@@ -1,0 +1,69 @@
+#include "msp430F2122.h"                 
+
+;
+; This is a basic template for the MSP430(F2122).  
+;
+
+RESET   EQU     0FFFEh
+RAM     EQU     00200h
+FLASH   EQU     0F000h
+
+        ORG     RESET
+        DC16    init                    ; Set reset vector to 'init' label
+        
+        ORG     RAM
+        
+        ; <declare global variables here>
+        
+;unsigned int i;        
+i:      DS8 2        
+        
+        ORG     FLASH
+
+init:   mov     #400h, SP               ; Set up stack pointer
+
+//void main(void)
+//{
+
+        ;WDTCTL = WDTPW + WDTHOLD;      // Stop watchdog timer
+        mov     #WDTPW+WDTHOLD,&WDTCTL  
+
+        ;BCSCTL1 = CALBC1_1MHZ;         // Set range  (1 Mhz)
+        mov.b   &CALBC1_1MHZ,&BCSCTL1   
+        ;DCOCTL = CALDCO_1MHZ;          // Set DCO step + modulation */ 
+        mov.b   &CALDCO_1MHZ,&DCOCTL   
+        
+main:   ; <insert program code here>
+
+        ;P1OUT &= ~0x01;                // Set P1.0 to 0 (when output)
+        bic.b   #0x1, &P1OUT            
+        ;P1DIR |= 0x01;                 // Set P1.0 to output direction 
+        bis.b   #0x1, &P1DIR
+        
+        //for (;;)
+        //{        
+        main_10:                        
+        
+            //P1OUT ^= 0x01;            // Toggle P1.0 using exclusive-OR
+            xor.b   #0x1, &P1OUT        
+
+            //i = 50000;                // Delay
+            mov.w   #0xc350, &i         
+ 
+            ;do
+            main_20:
+                ;i--; 
+                add.w   #0xffff, &i     
+            ;while (i != 0);
+            cmp.w   #0x0, &i
+            jne     main_20  
+            
+         //}       
+         jmp main_10   
+         
+//}         
+        
+         jmp     $                      ; Loop forever
+                
+         END
+

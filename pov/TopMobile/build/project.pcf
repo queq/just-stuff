@@ -1,0 +1,33 @@
+//! **************************************************************************
+// Written by: Map P.49d on Thu Jun 20 10:22:20 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rxd" LOCATE = SITE "G11" LEVEL 1;
+COMP "CharSalida<0>" LOCATE = SITE "R11" LEVEL 1;
+COMP "CharSalida<1>" LOCATE = SITE "N11" LEVEL 1;
+COMP "CharSalida<2>" LOCATE = SITE "M11" LEVEL 1;
+COMP "CharSalida<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "CharSalida<4>" LOCATE = SITE "U15" LEVEL 1;
+COMP "CharSalida<5>" LOCATE = SITE "V16" LEVEL 1;
+COMP "CharSalida<6>" LOCATE = SITE "U16" LEVEL 1;
+COMP "reset" LOCATE = SITE "A8" LEVEL 1;
+COMP "ledsOut<10>" LOCATE = SITE "L4" LEVEL 1;
+COMP "ledsOut<11>" LOCATE = SITE "L3" LEVEL 1;
+COMP "ledsOut<12>" LOCATE = SITE "J3" LEVEL 1;
+COMP "ledsOut<13>" LOCATE = SITE "J1" LEVEL 1;
+COMP "ledsOut<14>" LOCATE = SITE "K3" LEVEL 1;
+COMP "ledsOut<15>" LOCATE = SITE "K5" LEVEL 1;
+COMP "ledsOut<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "ledsOut<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "ledsOut<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "ledsOut<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "ledsOut<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "ledsOut<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "ledsOut<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "ledsOut<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "ledsOut<8>" LOCATE = SITE "K2" LEVEL 1;
+COMP "ledsOut<9>" LOCATE = SITE "K1" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,44 @@
+Release 14.4 Map P.49d (lin)
+Xilinx Mapping Report File for Design 'top_leds'
+
+Design Information
+------------------
+Command Line   : map -pr b -p xc3s500e-FG320 project.ngd 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Jun 20 08:16:43 2013
+
+Design Summary
+--------------
+Number of errors   :   4
+Number of warnings :   1
+
+Section 1 - Errors
+------------------
+ERROR:MapLib:30 - LOC constraint V10 on clk is invalid: No such site on the
+   device. To bypass this error set the environment variable 'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint K1 on ledsOut<1> is invalid: No such site on
+   the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint J3 on ledsOut<4> is invalid: No such site on
+   the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint L7 on ledsOut<9> is invalid: No such site on
+   the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+
+Section 2 - Warnings
+--------------------
+WARNING:Map:34 - Speed grade not specified.  Using default "-5".
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+
+Section 5 - Removed Logic
+-------------------------

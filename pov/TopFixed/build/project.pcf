@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.49d on Thu Jun 20 07:23:01 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "EN" LOCATE = SITE "R15" LEVEL 1;
+COMP "RS" LOCATE = SITE "M13" LEVEL 1;
+COMP "RW" LOCATE = SITE "R18" LEVEL 1;
+COMP "StringDisplay<0>" LOCATE = SITE "L15" LEVEL 1;
+COMP "StringDisplay<1>" LOCATE = SITE "K12" LEVEL 1;
+COMP "StringDisplay<2>" LOCATE = SITE "L17" LEVEL 1;
+COMP "StringDisplay<3>" LOCATE = SITE "M15" LEVEL 1;
+COMP "StringDisplay<4>" LOCATE = SITE "K13" LEVEL 1;
+COMP "StringDisplay<5>" LOCATE = SITE "L16" LEVEL 1;
+COMP "StringDisplay<6>" LOCATE = SITE "M14" LEVEL 1;
+COMP "SendBit" LOCATE = SITE "G15" LEVEL 1;
+COMP "Clock" LOCATE = SITE "B8" LEVEL 1;
+COMP "MsbOD" LOCATE = SITE "M16" LEVEL 1;
+COMP "Reset" LOCATE = SITE "J13" LEVEL 1;
+COMP "DataKeyboard" LOCATE = SITE "P11" LEVEL 1;
+COMP "ClockKeyboard" LOCATE = SITE "R12" LEVEL 1;
+NET "Clock_BUFGP/IBUFG" BEL "Clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

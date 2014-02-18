@@ -1,0 +1,7 @@
+INFILE=/home/cesaralp/Documents/Digital I/Proyecto POV/Código/TopTarjeta/build/project_r.ncd
+OUTFILE=/home/cesaralp/Documents/Digital I/Proyecto POV/Código/TopTarjeta/build/project_r.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=/home/cesaralp/Documents/Digital I/Proyecto POV/Código/TopTarjeta/build
+LICENSE=WebPack
+USER_INFO=210743280_0_0_551

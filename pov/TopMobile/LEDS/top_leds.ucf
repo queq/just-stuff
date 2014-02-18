@@ -1,0 +1,22 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "ledsOut<0>" LOC = T12;
+NET "ledsOut<1>" LOC = V12;
+NET "ledsOut<2>" LOC = N10;
+NET "ledsOut<3>" LOC = P11;
+NET "ledsOut<4>" LOC = M10;
+NET "ledsOut<5>" LOC = N9;
+NET "ledsOut<6>" LOC = U11;
+NET "ledsOut<7>" LOC = V11;
+NET "ledsOut<8>" LOC = K2;
+NET "ledsOut<9>" LOC = K1;
+NET "ledsOut<10>" LOC = L4;
+NET "ledsOut<11>" LOC = L3;
+NET "ledsOut<12>" LOC = J3;
+NET "ledsOut<13>" LOC = J1;
+NET "ledsOut<14>" LOC = K3;
+NET "ledsOut<15>" LOC = K5;
+NET "clk" LOC = V10;
+NET "run" LOC = C4;
+##NET "run" LOC = T10;

@@ -1,0 +1,1262 @@
+Release 14.4 - xst P.49d (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc3s500e-fg320
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : topTarjeta
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../topTarjeta.v" in library work
+Compiling verilog file "../ScanCodeControl.v" in library work
+Module <topTarjeta> compiled
+Compiling verilog file "../Muestrear.v" in library work
+Module <ScanCodeControl> compiled
+Compiling verilog file "../ModuloDato.v" in library work
+Module <Muestrear> compiled
+Compiling verilog file "../ScanCodeModule.v" in library work
+Module <ModuloDato> compiled
+Compiling verilog file "../Anterior_Actual.v" in library work
+Module <ScanCodeModule> compiled
+Compiling verilog file "../Converter.v" in library work
+Module <Anterior_Actual> compiled
+Compiling verilog file "../MaquinaDeControl.v" in library work
+Module <Converter> compiled
+Compiling verilog file "../Char_Ascii.v" in library work
+Module <MaquinaDeControl> compiled
+Compiling verilog file "../charComp.v" in library work
+Module <Char_Ascii> compiled
+Compiling verilog file "../control.v" in library work
+Module <charComp> compiled
+Compiling verilog file "../countComp.v" in library work
+Module <control> compiled
+Compiling verilog file "../counter.v" in library work
+Module <countComp> compiled
+Compiling verilog file "../mux.v" in library work
+Module <counter> compiled
+Compiling verilog file "../shiftString.v" in library work
+Module <mux> compiled
+Compiling verilog file "../memory.v" in library work
+Module <shiftString> compiled
+Compiling verilog file "../top_string.v" in library work
+Module <memory> compiled
+Compiling verilog file "../Control_Character.v" in library work
+Module <top_string> compiled
+Compiling verilog file "../adapter.v" in library work
+Module <Control_Character> compiled
+Compiling verilog file "../Top_Show.v" in library work
+Module <adapter> compiled
+Compiling verilog file "../Accumulator.v" in library work
+Module <Top_Show> compiled
+Compiling verilog file "../Create.v" in library work
+Module <Accumulator> compiled
+Compiling verilog file "../Enhecomp.v" in library work
+Module <Create> compiled
+Compiling verilog file "../SevenCont.v" in library work
+Module <Enhecomp> compiled
+Compiling verilog file "../ShowControl.v" in library work
+Module <SevenCont> compiled
+Compiling verilog file "../StringInput.v" in library work
+Module <ShowControl> compiled
+Compiling verilog file "../Zerocomp.v" in library work
+Module <StringInput> compiled
+Compiling verilog file "../Timer.v" in library work
+Module <Zerocomp> compiled
+Compiling verilog file "../controlTransmitter.v" in library work
+Module <Timer> compiled
+Compiling verilog file "../comparer.v" in library work
+Module <controlTransmitter> compiled
+Compiling verilog file "../stringCharLoader.v" in library work
+Module <comparer> compiled
+Compiling verilog file "../parityCreator.v" in library work
+Module <stringCharLoader> compiled
+Compiling verilog file "../bitSender.v" in library work
+Module <parityCreator> compiled
+Compiling verilog file "../frequencyDivider.v" in library work
+Module <bitSender> compiled
+Compiling verilog file "../top_teclado.v" in library work
+Module <frequencyDivider> compiled
+Compiling verilog file "../topTransmitter.v" in library work
+Module <top_teclado> compiled
+Module <topTransmitter> compiled
+No errors in compilation
+Analysis of file <"project.src"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <topTarjeta> in library <work>.
+
+Analyzing hierarchy for module <top_teclado> in library <work>.
+
+Analyzing hierarchy for module <topTransmitter> in library <work>.
+
+Analyzing hierarchy for module <Control_Character> in library <work>.
+
+Analyzing hierarchy for module <top_string> in library <work>.
+
+Analyzing hierarchy for module <Top_Show> in library <work>.
+
+Analyzing hierarchy for module <controlTransmitter> in library <work> with parameters.
+	ComparingString = "010"
+	GeneratingData = "100"
+	LoadingChar = "011"
+	LoadingString = "001"
+	SendingData = "101"
+	Standby = "000"
+
+Analyzing hierarchy for module <comparer> in library <work>.
+
+Analyzing hierarchy for module <stringCharLoader> in library <work>.
+
+Analyzing hierarchy for module <parityCreator> in library <work>.
+
+Analyzing hierarchy for module <frequencyDivider> in library <work> with parameters.
+	halfPeriod = "00000000000000000000101000101100"
+	n = "00000000000000000000000000001100"
+	period = "00000000000000000001010001011000"
+
+Analyzing hierarchy for module <bitSender> in library <work>.
+
+Analyzing hierarchy for module <MaquinaDeControl> in library <work> with parameters.
+	New = "010"
+	Recibido = "001"
+	Sleep = "000"
+	Type = "011"
+
+Analyzing hierarchy for module <Anterior_Actual> in library <work>.
+
+Analyzing hierarchy for module <Converter> in library <work>.
+
+Analyzing hierarchy for module <Char_Ascii> in library <work>.
+
+Analyzing hierarchy for module <ScanCodeModule> in library <work>.
+
+Analyzing hierarchy for module <control> in library <work> with parameters.
+	Add = "010"
+	AddEnhe = "101"
+	ChangeVirgul = "100"
+	Delete = "011"
+	Enter = "110"
+	effect = "111"
+	init = "000"
+	new_data = "001"
+
+Analyzing hierarchy for module <charComp> in library <work>.
+
+Analyzing hierarchy for module <countComp> in library <work>.
+
+Analyzing hierarchy for module <counter> in library <work>.
+
+Analyzing hierarchy for module <mux> in library <work> with parameters.
+	asciiEnhe = "0000010"
+
+Analyzing hierarchy for module <shiftString> in library <work>.
+
+Analyzing hierarchy for module <memory> in library <work>.
+
+Analyzing hierarchy for module <adapter> in library <work>.
+
+Analyzing hierarchy for module <Timer> in library <work>.
+
+Analyzing hierarchy for module <StringInput> in library <work>.
+
+Analyzing hierarchy for module <Accumulator> in library <work>.
+
+Analyzing hierarchy for module <Enhecomp> in library <work>.
+
+Analyzing hierarchy for module <Zerocomp> in library <work>.
+
+Analyzing hierarchy for module <Create> in library <work>.
+
+Analyzing hierarchy for module <SevenCont> in library <work>.
+
+Analyzing hierarchy for module <ShowControl> in library <work> with parameters.
+	CHECKCON = "0110"
+	CHECKENHE = "1000"
+	CLEARSCREEN = "0100"
+	CREATESTATE = "0111"
+	INITIAL1 = "0000"
+	INITIAL2 = "0001"
+	INITIAL3 = "0010"
+	INITIAL4 = "0011"
+	INITIAL5 = "1010"
+	INITIAL6 = "1011"
+	INITIAL7 = "1100"
+	LOADCAD = "0101"
+	PRIENHE = "1101"
+	PRINTSCR = "1001"
+	RESETSCREEN = "1110"
+	RESETSTATE = "1111"
+
+Analyzing hierarchy for module <Muestrear> in library <work> with parameters.
+	Down = "011"
+	Idle = "000"
+	NegEdge = "010"
+	NegEdgeTest = "001"
+	PosEdgeTest = "100"
+
+Analyzing hierarchy for module <ScanCodeControl> in library <work> with parameters.
+	NewS = "010"
+	Sleep = "000"
+	Trasmitir = "001"
+	Wait = "011"
+
+Analyzing hierarchy for module <ModuloDato> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <topTarjeta>.
+Module <topTarjeta> is correct for synthesis.
+ 
+Analyzing module <top_teclado> in library <work>.
+Module <top_teclado> is correct for synthesis.
+ 
+Analyzing module <Control_Character> in library <work>.
+Module <Control_Character> is correct for synthesis.
+ 
+Analyzing module <MaquinaDeControl> in library <work>.
+	New = 3'b010
+	Recibido = 3'b001
+	Sleep = 3'b000
+	Type = 3'b011
+Module <MaquinaDeControl> is correct for synthesis.
+ 
+Analyzing module <Anterior_Actual> in library <work>.
+Module <Anterior_Actual> is correct for synthesis.
+ 
+Analyzing module <Converter> in library <work>.
+Module <Converter> is correct for synthesis.
+ 
+Analyzing module <Char_Ascii> in library <work>.
+Module <Char_Ascii> is correct for synthesis.
+ 
+Analyzing module <ScanCodeModule> in library <work>.
+Module <ScanCodeModule> is correct for synthesis.
+ 
+Analyzing module <Muestrear> in library <work>.
+	Down = 3'b011
+	Idle = 3'b000
+	NegEdge = 3'b010
+	NegEdgeTest = 3'b001
+	PosEdgeTest = 3'b100
+Module <Muestrear> is correct for synthesis.
+ 
+Analyzing module <ScanCodeControl> in library <work>.
+	NewS = 3'b010
+	Sleep = 3'b000
+	Trasmitir = 3'b001
+	Wait = 3'b011
+Module <ScanCodeControl> is correct for synthesis.
+ 
+Analyzing module <ModuloDato> in library <work>.
+Module <ModuloDato> is correct for synthesis.
+ 
+Analyzing module <top_string> in library <work>.
+Module <top_string> is correct for synthesis.
+ 
+Analyzing module <control> in library <work>.
+	Add = 3'b010
+	AddEnhe = 3'b101
+	ChangeVirgul = 3'b100
+	Delete = 3'b011
+	Enter = 3'b110
+	effect = 3'b111
+	init = 3'b000
+	new_data = 3'b001
+Module <control> is correct for synthesis.
+ 
+Analyzing module <charComp> in library <work>.
+Module <charComp> is correct for synthesis.
+ 
+Analyzing module <countComp> in library <work>.
+Module <countComp> is correct for synthesis.
+ 
+Analyzing module <counter> in library <work>.
+Module <counter> is correct for synthesis.
+ 
+Analyzing module <mux> in library <work>.
+	asciiEnhe = 7'b0000010
+Module <mux> is correct for synthesis.
+ 
+Analyzing module <shiftString> in library <work>.
+Module <shiftString> is correct for synthesis.
+ 
+Analyzing module <memory> in library <work>.
+Module <memory> is correct for synthesis.
+ 
+Analyzing module <adapter> in library <work>.
+Module <adapter> is correct for synthesis.
+ 
+Analyzing module <Top_Show> in library <work>.
+Module <Top_Show> is correct for synthesis.
+ 
+Analyzing module <Timer> in library <work>.
+Module <Timer> is correct for synthesis.
+ 
+Analyzing module <StringInput> in library <work>.
+Module <StringInput> is correct for synthesis.
+ 
+Analyzing module <Accumulator> in library <work>.
+Module <Accumulator> is correct for synthesis.
+ 
+Analyzing module <Enhecomp> in library <work>.
+Module <Enhecomp> is correct for synthesis.
+ 
+Analyzing module <Zerocomp> in library <work>.
+Module <Zerocomp> is correct for synthesis.
+ 
+Analyzing module <Create> in library <work>.
+Module <Create> is correct for synthesis.
+ 
+Analyzing module <SevenCont> in library <work>.
+Module <SevenCont> is correct for synthesis.
+ 
+Analyzing module <ShowControl> in library <work>.
+	CHECKCON = 4'b0110
+	CHECKENHE = 4'b1000
+	CLEARSCREEN = 4'b0100
+	CREATESTATE = 4'b0111
+	INITIAL1 = 4'b0000
+	INITIAL2 = 4'b0001
+	INITIAL3 = 4'b0010
+	INITIAL4 = 4'b0011
+	INITIAL5 = 4'b1010
+	INITIAL6 = 4'b1011
+	INITIAL7 = 4'b1100
+	LOADCAD = 4'b0101
+	PRIENHE = 4'b1101
+	PRINTSCR = 4'b1001
+	RESETSCREEN = 4'b1110
+	RESETSTATE = 4'b1111
+Module <ShowControl> is correct for synthesis.
+ 
+Analyzing module <topTransmitter> in library <work>.
+Module <topTransmitter> is correct for synthesis.
+ 
+Analyzing module <controlTransmitter> in library <work>.
+	ComparingString = 3'b010
+	GeneratingData = 3'b100
+	LoadingChar = 3'b011
+	LoadingString = 3'b001
+	SendingData = 3'b101
+	Standby = 3'b000
+Module <controlTransmitter> is correct for synthesis.
+ 
+Analyzing module <comparer> in library <work>.
+Module <comparer> is correct for synthesis.
+ 
+Analyzing module <stringCharLoader> in library <work>.
+Module <stringCharLoader> is correct for synthesis.
+ 
+Analyzing module <parityCreator> in library <work>.
+Module <parityCreator> is correct for synthesis.
+ 
+Analyzing module <frequencyDivider> in library <work>.
+	halfPeriod = 32'sb00000000000000000000101000101100
+	n = 32'sb00000000000000000000000000001100
+	period = 32'sb00000000000000000001010001011000
+Module <frequencyDivider> is correct for synthesis.
+ 
+Analyzing module <bitSender> in library <work>.
+Module <bitSender> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <RW> in unit <Create> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <MaquinaDeControl>.
+    Related source file is "../MaquinaDeControl.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 61 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clock                     (falling_edge)       |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <MaquinaDeControl> synthesized.
+
+
+Synthesizing Unit <Anterior_Actual>.
+    Related source file is "../Anterior_Actual.v".
+    Found 8-bit register for signal <Anterior>.
+    Found 8-bit register for signal <Actual>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <Anterior_Actual> synthesized.
+
+
+Synthesizing Unit <Converter>.
+    Related source file is "../Converter.v".
+    Found 1-bit xor2 for signal <Entrada$xor0000> created at line 41.
+    Found 1-bit register for signal <Mayus>.
+    Found 1-bit register for signal <Shift>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Converter> synthesized.
+
+
+Synthesizing Unit <Char_Ascii>.
+    Related source file is "../Char_Ascii.v".
+    Found 1-bit register for signal <New>.
+    Found 7-bit register for signal <Char>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Char_Ascii> synthesized.
+
+
+Synthesizing Unit <Muestrear>.
+    Related source file is "../Muestrear.v".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Muestrear> synthesized.
+
+
+Synthesizing Unit <ScanCodeControl>.
+    Related source file is "../ScanCodeControl.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 39 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clk                       (falling_edge)       |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ScanCodeControl> synthesized.
+
+
+Synthesizing Unit <ModuloDato>.
+    Related source file is "../ModuloDato.v".
+    Found 1-bit register for signal <NewScanCode>.
+    Found 12-bit register for signal <Aux>.
+    Found 11-bit register for signal <Dato>.
+    Found 1-bit xor9 for signal <ParityCoherente$xor0000> created at line 23.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <ModuloDato> synthesized.
+
+
+Synthesizing Unit <control>.
+    Related source file is "../control.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <next_state> of Case statement line 61 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <next_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_3> for signal <next_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (falling_edge)       |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <control> synthesized.
+
+
+Synthesizing Unit <charComp>.
+    Related source file is "../charComp.v".
+    Found 16x1-bit ROM for signal <cNum$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <charComp> synthesized.
+
+
+Synthesizing Unit <countComp>.
+    Related source file is "../countComp.v".
+    Found 4-bit comparator greatequal for signal <cCounter$cmp_ge0000> created at line 6.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <countComp> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "../counter.v".
+    Found 4-bit updown counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <mux>.
+    Related source file is "../mux.v".
+Unit <mux> synthesized.
+
+
+Synthesizing Unit <shiftString>.
+    Related source file is "../shiftString.v".
+    Found 77-bit register for signal <temp>.
+    Summary:
+	inferred  77 D-type flip-flop(s).
+Unit <shiftString> synthesized.
+
+
+Synthesizing Unit <memory>.
+    Related source file is "../memory.v".
+    Found 1-bit register for signal <tempEnter>.
+    Found 1-bit register for signal <tempVirgul>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <memory> synthesized.
+
+
+Synthesizing Unit <adapter>.
+    Related source file is "../adapter.v".
+    Found 1-bit register for signal <completeOut>.
+    Found 1-bit register for signal <changeOut>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <adapter> synthesized.
+
+
+Synthesizing Unit <Timer>.
+    Related source file is "../Timer.v".
+    Found 21-bit register for signal <temp>.
+    Found 21-bit adder for signal <temp$share0000>.
+    Found 1-bit register for signal <temp_cycend>.
+    Found 1-bit register for signal <temp_ready>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Timer> synthesized.
+
+
+Synthesizing Unit <StringInput>.
+    Related source file is "../StringInput.v".
+    Found 77-bit register for signal <Regin>.
+    Summary:
+	inferred  77 D-type flip-flop(s).
+Unit <StringInput> synthesized.
+
+
+Synthesizing Unit <Accumulator>.
+    Related source file is "../Accumulator.v".
+    Found 7-bit register for signal <temp>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <Accumulator> synthesized.
+
+
+Synthesizing Unit <Enhecomp>.
+    Related source file is "../Enhecomp.v".
+Unit <Enhecomp> synthesized.
+
+
+Synthesizing Unit <Zerocomp>.
+    Related source file is "../Zerocomp.v".
+    Found 77-bit comparator equal for signal <Z$cmp_eq0000> created at line 7.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <Zerocomp> synthesized.
+
+
+Synthesizing Unit <Create>.
+    Related source file is "../Create.v".
+    Found 1-bit register for signal <MsbOD>.
+    Found 1-bit register for signal <RS>.
+    Found 7-bit register for signal <Out_display>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <Create> synthesized.
+
+
+Synthesizing Unit <SevenCont>.
+    Related source file is "../SevenCont.v".
+    Found 1-bit register for signal <temp_out>.
+    Found 4-bit up counter for signal <tempcont>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <SevenCont> synthesized.
+
+
+Synthesizing Unit <ShowControl>.
+    Related source file is "../ShowControl.v".
+    Found finite state machine <FSM_4> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 51                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 21                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ShowControl> synthesized.
+
+
+Synthesizing Unit <controlTransmitter>.
+    Related source file is "../controlTransmitter.v".
+    Found finite state machine <FSM_5> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (falling_edge)       |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <controlTransmitter> synthesized.
+
+
+Synthesizing Unit <comparer>.
+    Related source file is "../comparer.v".
+    Found 1-bit register for signal <NullString>.
+    Found 77-bit comparator equal for signal <NullString$cmp_eq0000> created at line 13.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <comparer> synthesized.
+
+
+Synthesizing Unit <stringCharLoader>.
+    Related source file is "../stringCharLoader.v".
+    Found 7-bit register for signal <Char>.
+    Found 77-bit register for signal <String>.
+    Summary:
+	inferred  84 D-type flip-flop(s).
+Unit <stringCharLoader> synthesized.
+
+
+Synthesizing Unit <parityCreator>.
+    Related source file is "../parityCreator.v".
+    Found 1-bit xor7 for signal <ParityBit>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <parityCreator> synthesized.
+
+
+Synthesizing Unit <frequencyDivider>.
+    Related source file is "../frequencyDivider.v".
+    Found 1-bit register for signal <clkSend>.
+    Found 13-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <frequencyDivider> synthesized.
+
+
+Synthesizing Unit <bitSender>.
+    Related source file is "../bitSender.v".
+    Found 1-bit register for signal <SendBit>.
+    Found 10-bit register for signal <DataChar>.
+    Found 1-bit register for signal <Generated>.
+    Found 10-bit register for signal <DataCharTemp>.
+    Summary:
+	inferred  22 D-type flip-flop(s).
+Unit <bitSender> synthesized.
+
+
+Synthesizing Unit <topTransmitter>.
+    Related source file is "../topTransmitter.v".
+Unit <topTransmitter> synthesized.
+
+
+Synthesizing Unit <top_string>.
+    Related source file is "../top_string.v".
+Unit <top_string> synthesized.
+
+
+Synthesizing Unit <Top_Show>.
+    Related source file is "../Top_Show.v".
+Unit <Top_Show> synthesized.
+
+
+Synthesizing Unit <ScanCodeModule>.
+    Related source file is "../ScanCodeModule.v".
+    Found 1-bit register for signal <ClkKB_syn>.
+    Found 1-bit register for signal <DataKB_syn>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <ScanCodeModule> synthesized.
+
+
+Synthesizing Unit <Control_Character>.
+    Related source file is "../Control_Character.v".
+Unit <Control_Character> synthesized.
+
+
+Synthesizing Unit <top_teclado>.
+    Related source file is "../top_teclado.v".
+Unit <top_teclado> synthesized.
+
+
+Synthesizing Unit <topTarjeta>.
+    Related source file is "../topTarjeta.v".
+Unit <topTarjeta> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x1-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 21-bit adder                                          : 1
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 33
+ 1-bit register                                        : 19
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 21-bit register                                       : 1
+ 7-bit register                                        : 4
+ 77-bit register                                       : 3
+ 8-bit register                                        : 2
+# Comparators                                          : 3
+ 4-bit comparator greatequal                           : 1
+ 77-bit comparator equal                               : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 1
+ 1-bit xor7                                            : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <Transmitter/topControl/current_state/FSM> on signal <current_state[1:6]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000001
+ 001   | 000010
+ 010   | 000100
+ 011   | 001000
+ 100   | 010000
+ 101   | 100000
+-------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <Teclado/Show/ShowControl1/current_state/FSM> on signal <current_state[1:16]> with one-hot encoding.
+---------------------------
+ State | Encoding
+---------------------------
+ 0000  | 0000000000000001
+ 0001  | 0000000000000010
+ 0010  | 0000000000000100
+ 0011  | 0000000000001000
+ 0100  | 0000001000000000
+ 0101  | 0000000010000000
+ 0110  | 0001000000000000
+ 0111  | 0000100000000000
+ 1000  | 0000010000000000
+ 1001  | 0010000000000000
+ 1010  | 0000000000010000
+ 1011  | 0000000000100000
+ 1100  | 0000000001000000
+ 1101  | 0100000000000000
+ 1110  | 1000000000000000
+ 1111  | 0000000100000000
+---------------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <Teclado/String/control1/next_state/FSM> on signal <next_state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 110
+ 011   | 101
+ 100   | 100
+ 101   | 111
+ 110   | 011
+ 111   | 010
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <Teclado/Character/ScanCode_Module/Control/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Teclado/Character/ScanCode_Module/Muestrear/state/FSM> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Teclado/Character/Maquina_Control/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <DataCharTemp_9> (without init value) has a constant value of 0 in block <topBitSender>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 6
+# ROMs                                                 : 1
+ 16x1-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 21-bit adder                                          : 1
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 358
+ Flip-Flops                                            : 358
+# Comparators                                          : 3
+ 4-bit comparator greatequal                           : 1
+ 77-bit comparator equal                               : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 1
+ 1-bit xor7                                            : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <DataCharTemp_9> (without init value) has a constant value of 0 in block <bitSender>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <topTarjeta> ...
+
+Optimizing unit <Anterior_Actual> ...
+
+Optimizing unit <Converter> ...
+
+Optimizing unit <Char_Ascii> ...
+
+Optimizing unit <ModuloDato> ...
+
+Optimizing unit <shiftString> ...
+
+Optimizing unit <Timer> ...
+
+Optimizing unit <StringInput> ...
+
+Optimizing unit <Create> ...
+
+Optimizing unit <stringCharLoader> ...
+
+Optimizing unit <frequencyDivider> ...
+
+Optimizing unit <bitSender> ...
+
+Optimizing unit <top_string> ...
+
+Optimizing unit <Top_Show> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 410
+ Flip-Flops                                            : 410
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : project.ngr
+Top Level Output File Name         : project.ngc
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 791
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 32
+#      LUT2                        : 35
+#      LUT3                        : 228
+#      LUT4                        : 355
+#      MUXCY                       : 72
+#      MUXF5                       : 23
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 410
+#      FD                          : 8
+#      FD_1                        : 2
+#      FDE_1                       : 1
+#      FDR                         : 26
+#      FDR_1                       : 30
+#      FDRE                        : 221
+#      FDRE_1                      : 84
+#      FDRS                        : 2
+#      FDRS_1                      : 13
+#      FDRSE                       : 5
+#      FDRSE_1                     : 1
+#      FDS                         : 4
+#      FDS_1                       : 1
+#      FDSE                        : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 3
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      382  out of   4656     8%  
+ Number of Slice Flip Flops:            398  out of   9312     4%  
+ Number of 4 input LUTs:                660  out of   9312     7%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+    IOB Flip Flops:                      12
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                       | Clock buffer(FF name)                      | Load  |
+-------------------------------------------------------------------+--------------------------------------------+-------+
+Transmitter/wCompareString(Transmitter/topControl/CompareString1:O)| NONE(*)(Transmitter/topComparer/NullString)| 1     |
+Clock                                                              | BUFGP                                      | 397   |
+Transmitter/topFrequencyDivider/clkSend                            | NONE(Transmitter/topBitSender/SendBit)     | 12    |
+-------------------------------------------------------------------+--------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 22.497ns (Maximum Frequency: 44.451MHz)
+   Minimum input arrival time before clock: 4.917ns
+   Maximum output required time after clock: 7.724ns
+   Maximum combinational path delay: 6.729ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 22.497ns (frequency: 44.451MHz)
+  Total number of paths / destination ports: 7962 / 945
+-------------------------------------------------------------------------
+Delay:               11.248ns (Levels of Logic = 10)
+  Source:            Teclado/Character/Anterior_Actual_Module/Actual_4 (FF)
+  Destination:       Teclado/Character/Maquina_Control/state_FSM_FFd1 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock falling
+
+  Data Path: Teclado/Character/Anterior_Actual_Module/Actual_4 to Teclado/Character/Maquina_Control/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            45   0.514   1.228  Teclado/Character/Anterior_Actual_Module/Actual_4 (Teclado/Character/Anterior_Actual_Module/Actual_4)
+     LUT3:I0->O            5   0.612   0.541  Teclado/Character/Convertir/Ascii<0>141 (Teclado/Character/Convertir/N41)
+     LUT4:I3->O            4   0.612   0.651  Teclado/Character/Convertir/Ascii<6>2 (Teclado/Character/Convertir/N15)
+     LUT4:I0->O            1   0.612   0.000  Teclado/Character/Convertir/Ascii<1>1_F (N209)
+     MUXF5:I0->O           2   0.278   0.383  Teclado/Character/Convertir/Ascii<1>1 (Teclado/Character/Convertir/N8)
+     LUT4:I3->O            1   0.612   0.360  Teclado/Character/Convertir/Ascii<4>24_SW0 (N137)
+     LUT4:I3->O            1   0.612   0.360  Teclado/Character/Convertir/Ascii<4>24 (Teclado/Character/Convertir/Ascii<4>24)
+     LUT4:I3->O            2   0.612   0.410  Teclado/Character/Convertir/Ascii<4>266 (Teclado/Character/Ascii<4>)
+     LUT3:I2->O            1   0.612   0.360  Teclado/Character/Maquina_Control/state_FSM_FFd1-In5_SW0 (N105)
+     LUT4:I3->O            1   0.612   0.387  Teclado/Character/Maquina_Control/state_FSM_FFd1-In19 (Teclado/Character/Maquina_Control/state_FSM_FFd1-In19)
+     LUT3:I2->O            1   0.612   0.000  Teclado/Character/Maquina_Control/state_FSM_FFd1-In36 (Teclado/Character/Maquina_Control/state_FSM_FFd1-In)
+     FDR_1:D                   0.268          Teclado/Character/Maquina_Control/state_FSM_FFd1
+    ----------------------------------------
+    Total                     11.248ns (6.568ns logic, 4.680ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Transmitter/topFrequencyDivider/clkSend'
+  Clock period: 1.926ns (frequency: 519.224MHz)
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Delay:               1.926ns (Levels of Logic = 1)
+  Source:            Transmitter/topBitSender/DataChar_8 (FF)
+  Destination:       Transmitter/topBitSender/DataChar_9 (FF)
+  Source Clock:      Transmitter/topFrequencyDivider/clkSend rising
+  Destination Clock: Transmitter/topFrequencyDivider/clkSend rising
+
+  Data Path: Transmitter/topBitSender/DataChar_8 to Transmitter/topBitSender/DataChar_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.514   0.532  Transmitter/topBitSender/DataChar_8 (Transmitter/topBitSender/DataChar_8)
+     LUT3:I0->O            1   0.612   0.000  Transmitter/topBitSender/DataChar_mux0000<9>1 (Transmitter/topBitSender/DataChar_mux0000<9>)
+     FDRE:D                    0.268          Transmitter/topBitSender/DataChar_9
+    ----------------------------------------
+    Total                      1.926ns (1.394ns logic, 0.532ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 367 / 354
+-------------------------------------------------------------------------
+Offset:              4.917ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       Transmitter/topFrequencyDivider/counter_12 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Reset to Transmitter/topFrequencyDivider/counter_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           276   1.106   1.290  Reset_IBUF (Reset_IBUF)
+     LUT4:I0->O            1   0.612   0.000  Transmitter/topFrequencyDivider/counter_or0000601 (Transmitter/topFrequencyDivider/counter_or000060)
+     MUXF5:I1->O          13   0.278   0.836  Transmitter/topFrequencyDivider/counter_or000060_f5 (Transmitter/topFrequencyDivider/counter_or0000)
+     FDR:R                     0.795          Transmitter/topFrequencyDivider/counter_0
+    ----------------------------------------
+    Total                      4.917ns (2.791ns logic, 2.126ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Transmitter/topFrequencyDivider/clkSend'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.241ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       Transmitter/topBitSender/DataChar_0 (FF)
+  Destination Clock: Transmitter/topFrequencyDivider/clkSend rising
+
+  Data Path: Reset to Transmitter/topBitSender/DataChar_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           276   1.106   1.290  Reset_IBUF (Reset_IBUF)
+     LUT3:I0->O           10   0.612   0.750  Transmitter/topBitSender/DataChar_not00011 (Transmitter/topBitSender/DataChar_not0001)
+     FDRE:CE                   0.483          Transmitter/topBitSender/DataChar_9
+    ----------------------------------------
+    Total                      4.241ns (2.201ns logic, 2.040ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 35 / 10
+-------------------------------------------------------------------------
+Offset:              7.724ns (Levels of Logic = 5)
+  Source:            Teclado/Show/ShowControl1/current_state_FSM_FFd12 (FF)
+  Destination:       EN (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: Teclado/Show/ShowControl1/current_state_FSM_FFd12 to EN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.514   0.690  Teclado/Show/ShowControl1/current_state_FSM_FFd12 (Teclado/Show/ShowControl1/current_state_FSM_FFd12)
+     LUT4:I0->O            1   0.612   0.360  Teclado/Show/ShowControl1/EN1_SW0 (N72)
+     LUT4:I3->O            3   0.612   0.520  Teclado/Show/ShowControl1/EN1 (Teclado/Show/N01)
+     LUT4:I1->O            1   0.612   0.000  Teclado/Show/ShowControl1/EN262 (Teclado/Show/ShowControl1/EN261)
+     MUXF5:I0->O           1   0.278   0.357  Teclado/Show/ShowControl1/EN26_f5 (EN_OBUF)
+     OBUF:I->O                 3.169          EN_OBUF (EN)
+    ----------------------------------------
+    Total                      7.724ns (5.797ns logic, 1.927ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Transmitter/topFrequencyDivider/clkSend'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            Transmitter/topBitSender/SendBit (FF)
+  Destination:       SendBit (PAD)
+  Source Clock:      Transmitter/topFrequencyDivider/clkSend rising
+
+  Data Path: Transmitter/topBitSender/SendBit to SendBit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.514   0.357  Transmitter/topBitSender/SendBit (Transmitter/topBitSender/SendBit)
+     OBUF:I->O                 3.169          SendBit_OBUF (SendBit)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.729ns (Levels of Logic = 4)
+  Source:            Reset (PAD)
+  Destination:       EN (PAD)
+
+  Data Path: Reset to EN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           276   1.106   1.207  Reset_IBUF (Reset_IBUF)
+     LUT4:I1->O            1   0.612   0.000  Teclado/Show/ShowControl1/EN261 (Teclado/Show/ShowControl1/EN26)
+     MUXF5:I1->O           1   0.278   0.357  Teclado/Show/ShowControl1/EN26_f5 (EN_OBUF)
+     OBUF:I->O                 3.169          EN_OBUF (EN)
+    ----------------------------------------
+    Total                      6.729ns (5.165ns logic, 1.564ns route)
+                                       (76.8% logic, 23.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 12.98 secs
+ 
+--> 
+
+
+Total memory usage is 173604 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

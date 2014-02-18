@@ -1,0 +1,1321 @@
+Release 14.4 - xst P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC6SLX16-CSG324-3
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : top_movil
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/top_movil.v" into library work
+Parsing module <top_movil>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Char.v" into library work
+Parsing module <Char>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/CharComparator.v" into library work
+Parsing module <CharComparator>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/control_o.v" into library work
+Parsing module <control_o>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/mstring.v" into library work
+Parsing module <mstring>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Parity.v" into library work
+Parsing module <Parity>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/StringComparator.v" into library work
+Parsing module <StringComparator>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Wait.v" into library work
+Parsing module <Wait>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/test.v" into library work
+Parsing module <test>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/TopReceiver/top_receptor.v" into library work
+Parsing module <top_receptor>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_1.v" into library work
+Parsing module <acc_1>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_col.v" into library work
+Parsing module <cont_col>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/lslA.v" into library work
+Parsing module <lslA>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_ASCCI.v" into library work
+Parsing module <top_ASCCI>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_2.v" into library work
+Parsing module <acc_2>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ram.v" into library work
+Parsing module <cont_ram>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/lsrB.v" into library work
+Parsing module <lsrB>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_col.v" into library work
+Parsing module <comp_col>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/acumulador.v" into library work
+Parsing module <acumulador>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/control_ascci.v" into library work
+Parsing module <control_ascci>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" into library work
+Parsing module <m_plexor>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_1.v" into library work
+Parsing module <comp_1>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/control_leer.v" into library work
+Parsing module <control_leer>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/ram.v" into library work
+Parsing module <ram>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_multiplicador.v" into library work
+Parsing module <top_multiplicador>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_2.v" into library work
+Parsing module <comp_2>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/control.v" into library work
+Parsing module <control>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/recorrido_col.v" into library work
+Parsing module <recorrido_col>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_ascci.v" into library work
+Parsing module <compn_ascci>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/dir_ascci.v" into library work
+Parsing module <dir_ascci>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/rom.v" into library work
+Parsing module <rom>.
+INFO:HDLCompiler:693 - "/home/pc/Escritorio/top_movil recepcion/LEDS/rom.v" Line 4. parameter declaration becomes local in rom with formal parameter declaration list
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_RAM.v" into library work
+Parsing module <top_RAM>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/comp.v" into library work
+Parsing module <comp>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/divisorFrecuencia.v" into library work
+Parsing module <divisor_de_frecuecia>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/select_efect.v" into library work
+Parsing module <select_efect>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ascci.v" into library work
+Parsing module <cont_ascci>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/impresion.v" into library work
+Parsing module <impresion>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect1.v" into library work
+Parsing module <top_efect1>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect2.v" into library work
+Parsing module <top_efect2>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect4.v" into library work
+Parsing module <top_efect4>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect5.v" into library work
+Parsing module <top_efect5>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/select_dir.v" into library work
+Parsing module <select_dir>.
+Analyzing Verilog file "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v" into library work
+Parsing module <top_leds>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_movil>.
+
+Elaborating module <top_receptor>.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:189 - "/home/pc/Escritorio/top_movil recepcion/TopReceiver/top_receptor.v" Line 27: Size mismatch in connection of port <char_count>. Formal port size is 4-bit while actual signal size is 3-bit.
+
+Elaborating module <Wait>.
+
+Elaborating module <StringComparator>.
+
+Elaborating module <Parity>.
+
+Elaborating module <mstring>.
+
+Elaborating module <control_o>.
+
+Elaborating module <CharComparator>.
+WARNING:HDLCompiler:189 - "/home/pc/Escritorio/top_movil recepcion/TopReceiver/top_receptor.v" Line 39: Size mismatch in connection of port <char_count>. Formal port size is 4-bit while actual signal size is 3-bit.
+
+Elaborating module <Char>.
+
+Elaborating module <test>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/TopReceiver/test.v" Line 48: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <top_leds>.
+
+Elaborating module <select_efect>.
+
+Elaborating module <top_RAM>.
+
+Elaborating module <impresion>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/impresion.v" Line 19: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/impresion.v" Line 23: Signal <con_tem> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <recorrido_col>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/recorrido_col.v" Line 19: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <divisor_de_frecuecia>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/divisorFrecuencia.v" Line 19: Result of 18-bit expression is truncated to fit in 17-bit target.
+
+Elaborating module <acc_1>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_1.v" Line 10: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <acc_2>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_2.v" Line 10: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <comp_1>.
+
+Elaborating module <comp_2>.
+
+Elaborating module <control_leer>.
+
+Elaborating module <top_ASCCI>.
+
+Elaborating module <select_dir>.
+
+Elaborating module <comp_col>.
+
+Elaborating module <compn_ascci>.
+
+Elaborating module <cont_ascci>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ascci.v" Line 11: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <cont_col>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_col.v" Line 11: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <cont_ram>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ram.v" Line 12: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <control_ascci>.
+
+Elaborating module <dir_ascci>.
+WARNING:HDLCompiler:413 - "/home/pc/Escritorio/top_movil recepcion/LEDS/dir_ascci.v" Line 15: Result of 32-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <m_plexor>.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 12: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 16: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 19: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 22: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 25: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 28: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 31: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 34: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 37: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 40: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v" Line 48: Signal <string> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <ram>.
+
+Elaborating module <rom>.
+Reading initialization file \"home/pc/Escritorio/top_movil recepcion/Memory.txt\".
+
+Elaborating module <top_multiplicador>.
+
+Elaborating module <acumulador>.
+
+Elaborating module <comp>.
+
+Elaborating module <lslA>.
+
+Elaborating module <lsrB>.
+
+Elaborating module <control>.
+
+Elaborating module <top_efect2>.
+WARNING:HDLCompiler:1127 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect2.v" Line 4: Assignment to temp2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1499 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect2.v" Line 2: Empty module <top_efect2> remains a black box.
+
+Elaborating module <top_efect1>.
+WARNING:HDLCompiler:1127 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect1.v" Line 4: Assignment to temp1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1499 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect1.v" Line 2: Empty module <top_efect1> remains a black box.
+
+Elaborating module <top_efect4>.
+WARNING:HDLCompiler:1127 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect4.v" Line 4: Assignment to temp4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1499 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect4.v" Line 2: Empty module <top_efect4> remains a black box.
+
+Elaborating module <top_efect5>.
+WARNING:HDLCompiler:1127 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect5.v" Line 4: Assignment to temp5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1499 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_efect5.v" Line 2: Empty module <top_efect5> remains a black box.
+WARNING:Xst:2972 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v" line 25. All outputs of instance <ef2> of block <top_efect2> are unconnected in block <top_leds>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v" line 26. All outputs of instance <ef1> of block <top_efect1> are unconnected in block <top_leds>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v" line 27. All outputs of instance <ef4> of block <top_efect4> are unconnected in block <top_leds>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v" line 28. All outputs of instance <ef5> of block <top_efect5> are unconnected in block <top_leds>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_movil>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/top_movil.v".
+    Summary:
+	no macro.
+Unit <top_movil> synthesized.
+
+Synthesizing Unit <top_receptor>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/top_receptor.v".
+    Summary:
+	no macro.
+Unit <top_receptor> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/counter.v".
+    Found 4-bit register for signal <str_count>.
+    Found 4-bit register for signal <char_count>.
+    Found 4-bit subtractor for signal <char_count[3]_GND_3_o_sub_3_OUT> created at line 23.
+    Found 4-bit subtractor for signal <str_count[3]_GND_3_o_sub_7_OUT> created at line 29.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <Wait>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Wait.v".
+        period = 10416
+        n = 14
+        halfPeriod = 5208
+        period1 = 2
+        n1 = 1
+        halfPeriod1 = 1
+        IDLE = 2'b00
+        POSSIBLESTART = 2'b01
+        READ = 2'b10
+        PARITY = 2'b11
+    Found 2-bit register for signal <counter1>.
+    Found 2-bit register for signal <next_state>.
+    Found 2-bit register for signal <current_state>.
+    Found 15-bit register for signal <counter>.
+    Found 1-bit register for signal <clk_2>.
+    Found 1-bit register for signal <check>.
+    Found 15-bit adder for signal <counter[14]_GND_5_o_add_19_OUT> created at line 79.
+    Found 2-bit adder for signal <counter1[1]_GND_5_o_add_22_OUT> created at line 85.
+    Found 15-bit adder for signal <counter[14]_GND_5_o_add_34_OUT> created at line 116.
+    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_PWR_5_o_wide_mux_37_OUT> created at line 39.
+    Found 15-bit 3-to-1 multiplexer for signal <current_state[1]_counter[14]_wide_mux_38_OUT> created at line 39.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_clk_2_Mux_39_o> created at line 39.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred  24 Multiplexer(s).
+Unit <Wait> synthesized.
+
+Synthesizing Unit <StringComparator>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/StringComparator.v".
+    Summary:
+	no macro.
+Unit <StringComparator> synthesized.
+
+Synthesizing Unit <Parity>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Parity.v".
+    Summary:
+Unit <Parity> synthesized.
+
+Synthesizing Unit <mstring>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/mstring.v".
+    Found 77-bit register for signal <String>.
+    Summary:
+	inferred  77 D-type flip-flop(s).
+Unit <mstring> synthesized.
+
+Synthesizing Unit <control_o>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/control_o.v".
+        IDLE = 3'b000
+        POSSIBLESTART = 3'b001
+        READ = 3'b010
+        ERROR = 3'b011
+        WRITE = 3'b100
+        STOP = 3'b101
+    Found 3-bit register for signal <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk_2 (falling_edge)                           |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   6 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <control_o> synthesized.
+
+Synthesizing Unit <CharComparator>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/CharComparator.v".
+    Summary:
+	no macro.
+Unit <CharComparator> synthesized.
+
+Synthesizing Unit <Char>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/Char.v".
+    Found 7-bit register for signal <char>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Char> synthesized.
+
+Synthesizing Unit <test>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/TopReceiver/test.v".
+        period = 25000000
+    Found 7-bit register for signal <CharSalida>.
+    Found 77-bit register for signal <ST>.
+    Found 26-bit register for signal <counter>.
+    Found 1-bit register for signal <band>.
+    Found 4-bit register for signal <count>.
+    Found 4-bit adder for signal <count[3]_GND_12_o_add_10_OUT> created at line 48.
+    Found 26-bit adder for signal <counter[25]_GND_12_o_add_11_OUT> created at line 51.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 115 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <test> synthesized.
+
+Synthesizing Unit <top_leds>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/top_leds.v".
+    Summary:
+	no macro.
+Unit <top_leds> synthesized.
+
+Synthesizing Unit <select_efect>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/select_efect.v".
+    Summary:
+	no macro.
+Unit <select_efect> synthesized.
+
+Synthesizing Unit <top_RAM>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/top_RAM.v".
+    Summary:
+	no macro.
+Unit <top_RAM> synthesized.
+
+Synthesizing Unit <impresion>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/impresion.v".
+    Found 4-bit register for signal <con_tem>.
+    Found 16-bit register for signal <temp>.
+    Found 4-bit adder for signal <con_tem[3]_GND_17_o_add_3_OUT> created at line 19.
+    Found 4-bit comparator greater for signal <con_tem[3]_T[3]_LessThan_3_o> created at line 17
+    Found 4-bit comparator equal for signal <con_tem[3]_T[3]_equal_11_o> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <impresion> synthesized.
+
+Synthesizing Unit <recorrido_col>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/recorrido_col.v".
+        maxCol = 79
+    Found 1-bit register for signal <done_crt>.
+    Found 8-bit register for signal <col>.
+    Found 1-bit register for signal <new_col>.
+    Found 8-bit adder for signal <col[7]_GND_18_o_add_2_OUT> created at line 19.
+    Found 8-bit comparator greater for signal <col[7]_GND_18_o_LessThan_2_o> created at line 19
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <recorrido_col> synthesized.
+
+Synthesizing Unit <divisor_de_frecuecia>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/divisorFrecuencia.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 17-bit register for signal <counter>.
+    Found 17-bit adder for signal <counter[16]_GND_19_o_add_2_OUT> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+Unit <divisor_de_frecuecia> synthesized.
+
+Synthesizing Unit <acc_1>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_1.v".
+    Found 3-bit register for signal <temp>.
+    Found 3-bit adder for signal <temp[2]_GND_20_o_add_3_OUT> created at line 10.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+Unit <acc_1> synthesized.
+
+Synthesizing Unit <acc_2>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/acc_2.v".
+    Found 4-bit register for signal <temp>.
+    Found 4-bit adder for signal <temp[3]_GND_21_o_add_3_OUT> created at line 10.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <acc_2> synthesized.
+
+Synthesizing Unit <comp_1>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_1.v".
+    Summary:
+	no macro.
+Unit <comp_1> synthesized.
+
+Synthesizing Unit <comp_2>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_2.v".
+    Summary:
+	no macro.
+Unit <comp_2> synthesized.
+
+Synthesizing Unit <control_leer>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/control_leer.v".
+        start = 7'b0000000
+        state_1 = 7'b0000001
+        state_2 = 7'b0000010
+        state_3 = 7'b0000011
+        state_4 = 7'b0000100
+        state_5 = 7'b0000101
+        state_6 = 7'b0000110
+        state_3f = 7'b0000111
+WARNING:Xst:647 - Input <top_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit register for signal <current_state>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | _n0061 (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000000                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <control_leer> synthesized.
+
+Synthesizing Unit <top_ASCCI>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/top_ASCCI.v".
+    Summary:
+	no macro.
+Unit <top_ASCCI> synthesized.
+
+Synthesizing Unit <select_dir>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/select_dir.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <select_dir> synthesized.
+
+Synthesizing Unit <comp_col>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/top_col.v".
+    Summary:
+	no macro.
+Unit <comp_col> synthesized.
+
+Synthesizing Unit <compn_ascci>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/comp_ascci.v".
+    Summary:
+	no macro.
+Unit <compn_ascci> synthesized.
+
+Synthesizing Unit <cont_ascci>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ascci.v".
+    Found 4-bit register for signal <temp>.
+    Found 4-bit adder for signal <temp[3]_GND_29_o_add_3_OUT> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <cont_ascci> synthesized.
+
+Synthesizing Unit <cont_col>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_col.v".
+    Found 4-bit register for signal <temp>.
+    Found 4-bit adder for signal <temp[3]_GND_30_o_add_3_OUT> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <cont_col> synthesized.
+
+Synthesizing Unit <cont_ram>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/cont_ram.v".
+    Found 8-bit register for signal <temp>.
+    Found 8-bit adder for signal <temp[7]_GND_31_o_add_3_OUT> created at line 12.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <cont_ram> synthesized.
+
+Synthesizing Unit <control_ascci>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/control_ascci.v".
+        start = 7'b0000000
+        state_1 = 7'b0000001
+        state_2 = 7'b0000010
+        state_3 = 7'b0000011
+        state_4 = 7'b0000100
+        state_5 = 7'b0000101
+        check = 7'b0000110
+        state_1p = 7'b0000111
+    Found 7-bit register for signal <current_state>.
+    Found finite state machine <FSM_2> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | _n0053 (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000000                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <control_ascci> synthesized.
+
+Synthesizing Unit <dir_ascci>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/dir_ascci.v".
+        d = 479
+    Found 11-bit register for signal <dir_rom>.
+    Found 11-bit register for signal <temp>.
+    Found 12-bit adder for signal <n0014> created at line 15.
+    Found 11-bit subtractor for signal <GND_33_o_GND_33_o_sub_5_OUT<10:0>> created at line 15.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+Unit <dir_ascci> synthesized.
+
+Synthesizing Unit <m_plexor>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/m_plexor.v".
+    Found 7-bit 12-to-1 multiplexer for signal <ascci> created at line 10.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <m_plexor> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/ram.v".
+        DWIDTH = 16
+        AWIDTH = 8
+        WORDS = 256
+    Found 256x16-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <datoram>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <ram> synthesized.
+
+Synthesizing Unit <rom>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/rom.v".
+        mem_file_name = "Memory.txt"
+WARNING:Xst:2999 - Signal 'mem', unconnected in block 'rom', is tied to its initial value.
+    Found 2048x16-bit single-port Read Only RAM <Mram_mem> for signal <mem>.
+    Found 16-bit register for signal <dato_rom>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <rom> synthesized.
+
+Synthesizing Unit <top_multiplicador>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/top_multiplicador.v".
+    Summary:
+	no macro.
+Unit <top_multiplicador> synthesized.
+
+Synthesizing Unit <acumulador>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/acumulador.v".
+    Found 11-bit register for signal <temp>.
+    Found 11-bit adder for signal <temp[10]_in_A[10]_add_3_OUT> created at line 12.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <acumulador> synthesized.
+
+Synthesizing Unit <comp>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/comp.v".
+    Summary:
+	no macro.
+Unit <comp> synthesized.
+
+Synthesizing Unit <lslA>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/lslA.v".
+    Found 11-bit register for signal <tmp>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <lslA> synthesized.
+
+Synthesizing Unit <lsrB>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/lsrB.v".
+        B = 5'b10000
+    Found 5-bit register for signal <tmp>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <lsrB> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "/home/pc/Escritorio/top_movil recepcion/LEDS/control.v".
+        start = 3'b000
+        check = 3'b001
+        acum = 3'b010
+        shft = 3'b011
+        end1 = 3'b100
+    Found 3-bit register for signal <current_state>.
+    Found 8x4-bit Read Only RAM for signal <_n0026>
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <current_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 D-type flip-flop(s).
+Unit <control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 2048x16-bit single-port Read Only RAM                 : 1
+ 256x16-bit single-port RAM                            : 1
+ 8x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 18
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 15-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 5
+ 4-bit subtractor                                      : 2
+ 8-bit adder                                           : 2
+# Registers                                            : 35
+ 1-bit register                                        : 6
+ 11-bit register                                       : 4
+ 15-bit register                                       : 1
+ 16-bit register                                       : 3
+ 17-bit register                                       : 1
+ 2-bit register                                        : 3
+ 26-bit register                                       : 1
+ 3-bit register                                        : 2
+ 4-bit register                                        : 7
+ 5-bit register                                        : 1
+ 7-bit register                                        : 2
+ 77-bit register                                       : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 50
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 4-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 3
+ 15-bit 3-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 5
+ 2-bit 4-to-1 multiplexer                              : 1
+ 26-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 5
+ 5-bit 2-to-1 multiplexer                              : 1
+ 7-bit 12-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 77-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor7                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <comb> is unconnected in block <trm>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <Wait>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+Unit <Wait> synthesized (advanced).
+
+Synthesizing (advanced) Unit <acc_1>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <acc_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <acc_2>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <acc_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <acumulador>.
+The following registers are absorbed into accumulator <temp>: 1 register on signal <temp>.
+Unit <acumulador> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cont_ascci>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <cont_ascci> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cont_col>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <cont_col> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cont_ram>.
+The following registers are absorbed into counter <temp>: 1 register on signal <temp>.
+Unit <cont_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <control>.
+INFO:Xst:3226 - The RAM <Mram__n0026> will be implemented as a BLOCK RAM, absorbing the following register(s): <current_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <next_state>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <char_count>: 1 register on signal <char_count>.
+The following registers are absorbed into counter <str_count>: 1 register on signal <str_count>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divisor_de_frecuecia>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <divisor_de_frecuecia> synthesized (advanced).
+
+Synthesizing (advanced) Unit <impresion>.
+The following registers are absorbed into counter <con_tem>: 1 register on signal <con_tem>.
+Unit <impresion> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <datoram>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wram>          | low      |
+    |     addrA          | connected to signal <direccionram>  |          |
+    |     diA            | connected to signal <datorom>       |          |
+    |     doA            | connected to signal <datoram>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <recorrido_col>.
+The following registers are absorbed into counter <col>: 1 register on signal <col>.
+Unit <recorrido_col> synthesized (advanced).
+
+Synthesizing (advanced) Unit <test>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <test> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top_ASCCI>.
+INFO:Xst:3226 - The RAM <ro/Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <ro/dato_rom>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dir_rom>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <datorom>       |          |
+    |     dorstA         | connected to signal <leer_rom>      | low      |
+    | reset value        | 0000000000000000                               |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <top_ASCCI> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 2048x16-bit single-port block Read Only RAM           : 1
+ 256x16-bit single-port block RAM                      : 1
+ 8x4-bit single-port block Read Only RAM               : 1
+# Adders/Subtractors                                   : 6
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 1
+ 15-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 12
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit down counter                                    : 2
+ 4-bit up counter                                      : 4
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 11-bit up accumulator                                 : 1
+# Registers                                            : 254
+ Flip-Flops                                            : 254
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 39
+ 1-bit 4-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 3
+ 15-bit 3-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 1
+ 7-bit 12-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 77-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor7                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <top_receptor/control_o/FSM_0> on signal <current_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tleds/TASCC/contrascc/FSM_2> on signal <current_state[1:8]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ 0000000 | 00000001
+ 0000111 | 00000010
+ 0000010 | 00000100
+ 0000011 | 00001000
+ 0000100 | 00010000
+ 0000101 | 00100000
+ 0000001 | 01000000
+ 0000110 | 10000000
+---------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tleds/trm/FSM_1> on signal <current_state[1:3]> with gray encoding.
+---------------------
+ State   | Encoding
+---------------------
+ 0000000 | 000
+ 0000001 | 001
+ 0000010 | 011
+ 0000100 | 010
+ 0000011 | 110
+ 0000111 | 111
+ 0000101 | 101
+---------------------
+
+Optimizing unit <mstring> ...
+
+Optimizing unit <top_movil> ...
+
+Optimizing unit <top_receptor> ...
+
+Optimizing unit <Wait> ...
+WARNING:Xst:1710 - FF/Latch <counter1_1> (without init value) has a constant value of 0 in block <Wait>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter1_1> (without init value) has a constant value of 0 in block <Wait>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <test> ...
+
+Optimizing unit <control_o> ...
+
+Optimizing unit <Char> ...
+
+Optimizing unit <top_ASCCI> ...
+
+Optimizing unit <control_ascci> ...
+
+Optimizing unit <lslA> ...
+
+Optimizing unit <lsrB> ...
+
+Optimizing unit <control> ...
+
+Optimizing unit <top_RAM> ...
+
+Optimizing unit <impresion> ...
+WARNING:Xst:1710 - FF/Latch <top_receptor/test/counter_25> (without init value) has a constant value of 0 in block <top_movil>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block top_movil, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 364
+ Flip-Flops                                            : 364
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 656
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 68
+#      LUT2                        : 61
+#      LUT3                        : 27
+#      LUT4                        : 131
+#      LUT5                        : 36
+#      LUT6                        : 106
+#      MUXCY                       : 105
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 99
+# FlipFlops/Latches                : 364
+#      FD                          : 31
+#      FD_1                        : 5
+#      FDC                         : 25
+#      FDC_1                       : 5
+#      FDCE                        : 196
+#      FDE                         : 28
+#      FDPE                        : 10
+#      FDR                         : 17
+#      FDR_1                       : 8
+#      FDRE                        : 38
+#      FDS_1                       : 1
+# RAMS                             : 4
+#      RAMB16BWER                  : 2
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 25
+#      IBUF                        : 2
+#      OBUF                        : 23
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             357  out of  18224     1%  
+ Number of Slice LUTs:                  442  out of   9112     4%  
+    Number used as Logic:               442  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    490
+   Number with an unused Flip Flop:     133  out of    490    27%  
+   Number with an unused LUT:            48  out of    490     9%  
+   Number of fully used LUT-FF pairs:   309  out of    490    63%  
+   Number of unique control sets:        24
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    232    11%  
+    IOB Flip Flops/Latches:               7
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of     32     9%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+top_receptor/Wait/clk_2            | BUFG                            | 94    |
+clk                                | BUFGP                           | 253   |
+tleds/TASCC/done                   | NONE(tleds/TASCC/dirasc/temp_10)| 11    |
+tleds/trm/div_fr/clk_out           | NONE(tleds/trm/recol/col_7)     | 10    |
+-----------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.428ns (Maximum Frequency: 118.655MHz)
+   Minimum input arrival time before clock: 6.689ns
+   Maximum output required time after clock: 6.282ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'top_receptor/Wait/clk_2'
+  Clock period: 8.234ns (frequency: 121.443MHz)
+  Total number of paths / destination ports: 376 / 182
+-------------------------------------------------------------------------
+Delay:               4.117ns (Levels of Logic = 1)
+  Source:            top_receptor/control_o/current_state_FSM_FFd3 (FF)
+  Destination:       top_receptor/counter/str_count_3 (FF)
+  Source Clock:      top_receptor/Wait/clk_2 falling
+  Destination Clock: top_receptor/Wait/clk_2 rising
+
+  Data Path: top_receptor/control_o/current_state_FSM_FFd3 to top_receptor/counter/str_count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           39   0.447   1.392  top_receptor/control_o/current_state_FSM_FFd3 (top_receptor/control_o/current_state_FSM_FFd3)
+     LUT3:I2->O           81   0.205   1.751  top_receptor/control_o/Mmux_WriteString11 (top_receptor/WriteString)
+     FDPE:CE                   0.322          top_receptor/counter/str_count_0
+    ----------------------------------------
+    Total                      4.117ns (0.974ns logic, 3.143ns route)
+                                       (23.7% logic, 76.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.428ns (frequency: 118.655MHz)
+  Total number of paths / destination ports: 31277 / 532
+-------------------------------------------------------------------------
+Delay:               4.214ns (Levels of Logic = 1)
+  Source:            tleds/TASCC/mult/control1/Mram__n0026 (RAM)
+  Destination:       tleds/TASCC/mult/lslA1/tmp_6 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk rising
+
+  Data Path: tleds/TASCC/mult/control1/Mram__n0026 to tleds/TASCC/mult/lslA1/tmp_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO2   28   1.650   1.235  tleds/TASCC/mult/control1/Mram__n0026 (tleds/TASCC/mult/w_ld_rst)
+     LUT2:I1->O            8   0.205   0.802  tleds/TASCC/mult/lslA1/_n0017_inv1 (tleds/TASCC/mult/lslA1/_n0017_inv)
+     FDE:CE                    0.322          tleds/TASCC/mult/lslA1/tmp_0
+    ----------------------------------------
+    Total                      4.214ns (2.177ns logic, 2.037ns route)
+                                       (51.7% logic, 48.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tleds/trm/div_fr/clk_out'
+  Clock period: 3.705ns (frequency: 269.902MHz)
+  Total number of paths / destination ports: 108 / 17
+-------------------------------------------------------------------------
+Delay:               3.705ns (Levels of Logic = 2)
+  Source:            tleds/trm/recol/col_2 (FF)
+  Destination:       tleds/trm/recol/col_7 (FF)
+  Source Clock:      tleds/trm/div_fr/clk_out rising
+  Destination Clock: tleds/trm/div_fr/clk_out rising
+
+  Data Path: tleds/trm/recol/col_2 to tleds/trm/recol/col_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.879  tleds/trm/recol/col_2 (tleds/trm/recol/col_2)
+     LUT3:I0->O            2   0.205   0.845  tleds/trm/recol/col[7]_GND_18_o_LessThan_2_o1_SW0 (N26)
+     LUT6:I3->O            8   0.205   0.802  tleds/trm/recol/col[7]_GND_18_o_LessThan_2_o1 (tleds/trm/recol/col[7]_GND_18_o_LessThan_2_o)
+     FDCE:CE                   0.322          tleds/trm/recol/col_0
+    ----------------------------------------
+    Total                      3.705ns (1.179ns logic, 2.526ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'top_receptor/Wait/clk_2'
+  Total number of paths / destination ports: 213 / 195
+-------------------------------------------------------------------------
+Offset:              5.797ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       top_receptor/counter/str_count_3 (FF)
+  Destination Clock: top_receptor/Wait/clk_2 rising
+
+  Data Path: reset to top_receptor/counter/str_count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           266   1.222   2.296  reset_IBUF (reset_IBUF)
+     LUT3:I0->O           81   0.205   1.751  top_receptor/control_o/Mmux_WriteString11 (top_receptor/WriteString)
+     FDPE:CE                   0.322          top_receptor/counter/str_count_0
+    ----------------------------------------
+    Total                      5.797ns (1.749ns logic, 4.048ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 357 / 236
+-------------------------------------------------------------------------
+Offset:              6.689ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       top_receptor/test/ST_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to top_receptor/test/ST_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           266   1.222   2.068  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            1   0.205   0.944  top_receptor/test/_n0110_inv_SW0 (N8)
+     LUT6:I0->O           77   0.203   1.725  top_receptor/test/_n0110_inv (top_receptor/test/_n0110_inv)
+     FDCE:CE                   0.322          top_receptor/test/ST_76
+    ----------------------------------------
+    Total                      6.689ns (1.952ns logic, 4.737ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 151 / 23
+-------------------------------------------------------------------------
+Offset:              6.282ns (Levels of Logic = 3)
+  Source:            tleds/trm/accb/temp_2 (FF)
+  Destination:       ledsOut<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: tleds/trm/accb/temp_2 to ledsOut<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   0.931  tleds/trm/accb/temp_2 (tleds/trm/accb/temp_2)
+     LUT4:I0->O           16   0.203   1.349  tleds/trm/imp/con_tem[3]_T[3]_equal_11_o4_SW0 (N30)
+     LUT6:I1->O            1   0.203   0.579  tleds/trm/imp/Mmux_ledsOut17 (ledsOut_0_OBUF)
+     OBUF:I->O                 2.571          ledsOut_0_OBUF (ledsOut<0>)
+    ----------------------------------------
+    Total                      6.282ns (3.424ns logic, 2.858ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+clk                     |    8.125|    4.214|    3.507|         |
+tleds/TASCC/done        |    4.533|         |         |         |
+tleds/trm/div_fr/clk_out|    2.509|         |    1.633|         |
+top_receptor/Wait/clk_2 |    2.677|    5.466|    3.895|         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tleds/TASCC/done
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tleds/trm/div_fr/clk_out
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+clk                     |         |    3.388|         |         |
+tleds/trm/div_fr/clk_out|    3.705|         |         |         |
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock top_receptor/Wait/clk_2
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+clk                    |         |         |    1.666|         |
+top_receptor/Wait/clk_2|    4.575|    4.117|    3.535|         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.03 secs
+ 
+--> 
+
+
+Total memory usage is 385464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

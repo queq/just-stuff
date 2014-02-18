@@ -1,0 +1,1101 @@
+Release 14.4 - xst P.49d (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc3s500e-FG320
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : top_leds
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../top_leds.v" in library work
+Compiling verilog file "../acc_1.v" in library work
+Module <top_leds> compiled
+Compiling verilog file "../cont_col.v" in library work
+Module <acc_1> compiled
+Compiling verilog file "../lslA.v" in library work
+Module <cont_col> compiled
+Compiling verilog file "../top_ASCCI.v" in library work
+Module <lslA> compiled
+Compiling verilog file "../acc_2.v" in library work
+Module <top_ASCCI> compiled
+Compiling verilog file "../cont_ram.v" in library work
+Module <acc_2> compiled
+Compiling verilog file "../lsrB.v" in library work
+Module <cont_ram> compiled
+Compiling verilog file "../top_col.v" in library work
+Module <lsrB> compiled
+Compiling verilog file "../acumulador.v" in library work
+Module <comp_col> compiled
+Compiling verilog file "../control_ascci.v" in library work
+Module <acumulador> compiled
+Compiling verilog file "../m_plexor.v" in library work
+Module <control_ascci> compiled
+Compiling verilog file "../comp_1.v" in library work
+Module <m_plexor> compiled
+Compiling verilog file "../control_leer.v" in library work
+Module <comp_1> compiled
+Compiling verilog file "../ram.v" in library work
+Module <control_leer> compiled
+Compiling verilog file "../top_multiplicador.v" in library work
+Module <ram> compiled
+Compiling verilog file "../comp_2.v" in library work
+Module <top_multiplicador> compiled
+Compiling verilog file "../control.v" in library work
+Module <comp_2> compiled
+Compiling verilog file "../recorrido_col.v" in library work
+Module <control> compiled
+Compiling verilog file "../comp_ascci.v" in library work
+Module <recorrido_col> compiled
+Compiling verilog file "../dir_ascci.v" in library work
+Module <compn_ascci> compiled
+Compiling verilog file "../rom.v" in library work
+Module <dir_ascci> compiled
+Compiling verilog file "../top_RAM.v" in library work
+Module <rom> compiled
+Compiling verilog file "../comp.v" in library work
+Module <top_RAM> compiled
+Compiling verilog file "../divisorFrecuencia.v" in library work
+Module <comp> compiled
+Compiling verilog file "../select_efect.v" in library work
+Module <divisor_de_frecuecia> compiled
+Compiling verilog file "../cont_ascci.v" in library work
+Module <select_efect> compiled
+Compiling verilog file "../impresion.v" in library work
+Module <cont_ascci> compiled
+Compiling verilog file "../top_efect1.v" in library work
+Module <impresion> compiled
+Compiling verilog file "../top_efect2.v" in library work
+Module <top_efect1> compiled
+Compiling verilog file "../top_efect4.v" in library work
+Module <top_efect2> compiled
+Compiling verilog file "../top_efect5.v" in library work
+Module <top_efect4> compiled
+Compiling verilog file "../select_dir.v" in library work
+Module <top_efect5> compiled
+Compiling verilog file "../test.v" in library work
+Module <select_dir> compiled
+Module <test> compiled
+No errors in compilation
+Analysis of file <"project.src"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top_leds> in library <work>.
+
+Analyzing hierarchy for module <select_efect> in library <work>.
+
+Analyzing hierarchy for module <top_RAM> in library <work>.
+
+Analyzing hierarchy for module <top_ASCCI> in library <work>.
+
+Analyzing hierarchy for module <top_efect2> in library <work>.
+
+Analyzing hierarchy for module <top_efect1> in library <work>.
+
+Analyzing hierarchy for module <top_efect4> in library <work>.
+
+Analyzing hierarchy for module <top_efect5> in library <work>.
+
+Analyzing hierarchy for module <test> in library <work>.
+
+Analyzing hierarchy for module <impresion> in library <work>.
+
+Analyzing hierarchy for module <recorrido_col> in library <work> with parameters.
+	maxCol = "00000000000000000000000001001111"
+
+Analyzing hierarchy for module <divisor_de_frecuecia> in library <work>.
+
+Analyzing hierarchy for module <acc_1> in library <work>.
+
+Analyzing hierarchy for module <acc_2> in library <work>.
+
+Analyzing hierarchy for module <comp_1> in library <work>.
+
+Analyzing hierarchy for module <comp_2> in library <work>.
+
+Analyzing hierarchy for module <control_leer> in library <work> with parameters.
+	start = "0000000"
+	state_1 = "0000001"
+	state_2 = "0000010"
+	state_3 = "0000011"
+	state_3f = "0000111"
+	state_4 = "0000100"
+	state_5 = "0000101"
+	state_6 = "0000110"
+
+Analyzing hierarchy for module <select_dir> in library <work>.
+
+Analyzing hierarchy for module <comp_col> in library <work>.
+
+Analyzing hierarchy for module <compn_ascci> in library <work>.
+
+Analyzing hierarchy for module <cont_ascci> in library <work>.
+
+Analyzing hierarchy for module <cont_col> in library <work>.
+
+Analyzing hierarchy for module <cont_ram> in library <work>.
+
+Analyzing hierarchy for module <control_ascci> in library <work> with parameters.
+	check = "0000110"
+	start = "0000000"
+	state_1 = "0000001"
+	state_1p = "0000111"
+	state_2 = "0000010"
+	state_3 = "0000011"
+	state_4 = "0000100"
+	state_5 = "0000101"
+
+Analyzing hierarchy for module <dir_ascci> in library <work> with parameters.
+	d = "00000000000000000000000111011111"
+
+Analyzing hierarchy for module <m_plexor> in library <work>.
+
+Analyzing hierarchy for module <ram> in library <work> with parameters.
+	AWIDTH = "00000000000000000000000000001000"
+	DWIDTH = "00000000000000000000000000010000"
+	WORDS = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <rom> in library <work> with parameters.
+	AWIDTH = "00000000000000000000000000001011"
+	DWIDTH = "00000000000000000000000000010000"
+	WORDS = "00000000000000000000100000000000"
+	mem_file_name = "Memory.txt"
+
+Analyzing hierarchy for module <top_multiplicador> in library <work>.
+
+Analyzing hierarchy for module <acumulador> in library <work>.
+
+Analyzing hierarchy for module <comp> in library <work>.
+
+Analyzing hierarchy for module <lslA> in library <work>.
+
+Analyzing hierarchy for module <lsrB> in library <work> with parameters.
+	B = "10000"
+
+Analyzing hierarchy for module <control> in library <work> with parameters.
+	acum = "010"
+	check = "001"
+	end1 = "100"
+	shft = "011"
+	start = "000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top_leds>.
+Module <top_leds> is correct for synthesis.
+ 
+Analyzing module <select_efect> in library <work>.
+Module <select_efect> is correct for synthesis.
+ 
+Analyzing module <top_RAM> in library <work>.
+Module <top_RAM> is correct for synthesis.
+ 
+Analyzing module <impresion> in library <work>.
+WARNING:Xst:905 - "../impresion.v" line 22: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <con_tem>, <T>
+Module <impresion> is correct for synthesis.
+ 
+Analyzing module <recorrido_col> in library <work>.
+	maxCol = 32'sb00000000000000000000000001001111
+Module <recorrido_col> is correct for synthesis.
+ 
+Analyzing module <divisor_de_frecuecia> in library <work>.
+Module <divisor_de_frecuecia> is correct for synthesis.
+ 
+Analyzing module <acc_1> in library <work>.
+Module <acc_1> is correct for synthesis.
+ 
+Analyzing module <acc_2> in library <work>.
+Module <acc_2> is correct for synthesis.
+ 
+Analyzing module <comp_1> in library <work>.
+Module <comp_1> is correct for synthesis.
+ 
+Analyzing module <comp_2> in library <work>.
+Module <comp_2> is correct for synthesis.
+ 
+Analyzing module <control_leer> in library <work>.
+	start = 7'b0000000
+	state_1 = 7'b0000001
+	state_2 = 7'b0000010
+	state_3 = 7'b0000011
+	state_3f = 7'b0000111
+	state_4 = 7'b0000100
+	state_5 = 7'b0000101
+	state_6 = 7'b0000110
+Module <control_leer> is correct for synthesis.
+ 
+Analyzing module <top_ASCCI> in library <work>.
+Module <top_ASCCI> is correct for synthesis.
+ 
+Analyzing module <select_dir> in library <work>.
+Module <select_dir> is correct for synthesis.
+ 
+Analyzing module <comp_col> in library <work>.
+Module <comp_col> is correct for synthesis.
+ 
+Analyzing module <compn_ascci> in library <work>.
+Module <compn_ascci> is correct for synthesis.
+ 
+Analyzing module <cont_ascci> in library <work>.
+Module <cont_ascci> is correct for synthesis.
+ 
+Analyzing module <cont_col> in library <work>.
+Module <cont_col> is correct for synthesis.
+ 
+Analyzing module <cont_ram> in library <work>.
+Module <cont_ram> is correct for synthesis.
+ 
+Analyzing module <control_ascci> in library <work>.
+	check = 7'b0000110
+	start = 7'b0000000
+	state_1 = 7'b0000001
+	state_1p = 7'b0000111
+	state_2 = 7'b0000010
+	state_3 = 7'b0000011
+	state_4 = 7'b0000100
+	state_5 = 7'b0000101
+Module <control_ascci> is correct for synthesis.
+ 
+Analyzing module <dir_ascci> in library <work>.
+	d = 32'sb00000000000000000000000111011111
+Module <dir_ascci> is correct for synthesis.
+ 
+Analyzing module <m_plexor> in library <work>.
+WARNING:Xst:905 - "../m_plexor.v" line 9: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <string>
+Module <m_plexor> is correct for synthesis.
+ 
+Analyzing module <ram> in library <work>.
+	AWIDTH = 32'sb00000000000000000000000000001000
+	DWIDTH = 32'sb00000000000000000000000000010000
+	WORDS = 32'sb00000000000000000000000100000000
+Module <ram> is correct for synthesis.
+ 
+Analyzing module <rom> in library <work>.
+	AWIDTH = 32'sb00000000000000000000000000001011
+	DWIDTH = 32'sb00000000000000000000000000010000
+	WORDS = 32'sb00000000000000000000100000000000
+	mem_file_name = "Memory.txt"
+INFO:Xst:2546 - "../rom.v" line 8: reading initialization file "Memory.txt".
+Module <rom> is correct for synthesis.
+ 
+Analyzing module <top_multiplicador> in library <work>.
+Module <top_multiplicador> is correct for synthesis.
+ 
+Analyzing module <acumulador> in library <work>.
+Module <acumulador> is correct for synthesis.
+ 
+Analyzing module <comp> in library <work>.
+Module <comp> is correct for synthesis.
+ 
+Analyzing module <lslA> in library <work>.
+Module <lslA> is correct for synthesis.
+ 
+Analyzing module <lsrB> in library <work>.
+	B = 5'b10000
+Module <lsrB> is correct for synthesis.
+ 
+Analyzing module <control> in library <work>.
+	acum = 3'b010
+	check = 3'b001
+	end1 = 3'b100
+	shft = 3'b011
+	start = 3'b000
+Module <control> is correct for synthesis.
+ 
+Analyzing module <top_efect2> in library <work>.
+Module <top_efect2> is correct for synthesis.
+ 
+Analyzing module <top_efect1> in library <work>.
+Module <top_efect1> is correct for synthesis.
+ 
+Analyzing module <top_efect4> in library <work>.
+Module <top_efect4> is correct for synthesis.
+ 
+Analyzing module <top_efect5> in library <work>.
+Module <top_efect5> is correct for synthesis.
+ 
+Analyzing module <test> in library <work>.
+Module <test> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <temp2> in unit <top_efect2> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp1> in unit <top_efect1> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp4> in unit <top_efect4> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp5> in unit <top_efect5> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <string> in unit <test> has a constant value of 01100111001011100100010001101000001100010010010111001000100011010000011000100 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <select_efect>.
+    Related source file is "../select_efect.v".
+Unit <select_efect> synthesized.
+
+
+Synthesizing Unit <top_efect2>.
+    Related source file is "../top_efect2.v".
+WARNING:Xst:646 - Signal <temp2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_efect2> synthesized.
+
+
+Synthesizing Unit <top_efect1>.
+    Related source file is "../top_efect1.v".
+WARNING:Xst:646 - Signal <temp1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_efect1> synthesized.
+
+
+Synthesizing Unit <top_efect4>.
+    Related source file is "../top_efect4.v".
+WARNING:Xst:646 - Signal <temp4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_efect4> synthesized.
+
+
+Synthesizing Unit <top_efect5>.
+    Related source file is "../top_efect5.v".
+WARNING:Xst:646 - Signal <temp5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_efect5> synthesized.
+
+
+Synthesizing Unit <test>.
+    Related source file is "../test.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <test> synthesized.
+
+
+Synthesizing Unit <impresion>.
+    Related source file is "../impresion.v".
+    Found 4-bit up counter for signal <con_tem>.
+    Found 4-bit comparator less for signal <con_tem$cmp_lt0000> created at line 17.
+    Found 4-bit comparator equal for signal <ledsOut$cmp_eq0000> created at line 23.
+    Found 16-bit register for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <impresion> synthesized.
+
+
+Synthesizing Unit <recorrido_col>.
+    Related source file is "../recorrido_col.v".
+    Found 1-bit register for signal <new_col>.
+    Found 1-bit register for signal <done_crt>.
+    Found 8-bit up counter for signal <col>.
+    Found 8-bit comparator less for signal <col$cmp_lt0000> created at line 19.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <recorrido_col> synthesized.
+
+
+Synthesizing Unit <divisor_de_frecuecia>.
+    Related source file is "../divisorFrecuencia.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 13-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <divisor_de_frecuecia> synthesized.
+
+
+Synthesizing Unit <acc_1>.
+    Related source file is "../acc_1.v".
+    Found 3-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <acc_1> synthesized.
+
+
+Synthesizing Unit <acc_2>.
+    Related source file is "../acc_2.v".
+    Found 4-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <acc_2> synthesized.
+
+
+Synthesizing Unit <comp_1>.
+    Related source file is "../comp_1.v".
+Unit <comp_1> synthesized.
+
+
+Synthesizing Unit <comp_2>.
+    Related source file is "../comp_2.v".
+Unit <comp_2> synthesized.
+
+
+Synthesizing Unit <control_leer>.
+    Related source file is "../control_leer.v".
+WARNING:Xst:647 - Input <top_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <current_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 24 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 8-bit register for signal <current_state>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <control_leer> synthesized.
+
+
+Synthesizing Unit <select_dir>.
+    Related source file is "../select_dir.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <select_dir> synthesized.
+
+
+Synthesizing Unit <comp_col>.
+    Related source file is "../top_col.v".
+Unit <comp_col> synthesized.
+
+
+Synthesizing Unit <compn_ascci>.
+    Related source file is "../comp_ascci.v".
+Unit <compn_ascci> synthesized.
+
+
+Synthesizing Unit <cont_ascci>.
+    Related source file is "../cont_ascci.v".
+    Found 4-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cont_ascci> synthesized.
+
+
+Synthesizing Unit <cont_col>.
+    Related source file is "../cont_col.v".
+    Found 4-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cont_col> synthesized.
+
+
+Synthesizing Unit <cont_ram>.
+    Related source file is "../cont_ram.v".
+    Found 8-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cont_ram> synthesized.
+
+
+Synthesizing Unit <control_ascci>.
+    Related source file is "../control_ascci.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <current_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 27 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 8-bit register for signal <current_state>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <control_ascci> synthesized.
+
+
+Synthesizing Unit <dir_ascci>.
+    Related source file is "../dir_ascci.v".
+    Found 11-bit register for signal <dir_rom>.
+    Found 11-bit adder carry out for signal <dir_rom$addsub0000> created at line 15.
+    Found 11-bit subtractor for signal <dir_rom$sub0000> created at line 15.
+    Found 11-bit register for signal <temp>.
+    Summary:
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <dir_ascci> synthesized.
+
+
+Synthesizing Unit <m_plexor>.
+    Related source file is "../m_plexor.v".
+Unit <m_plexor> synthesized.
+
+
+Synthesizing Unit <ram>.
+    Related source file is "../ram.v".
+    Found 256x16-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <datoram>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <ram> synthesized.
+
+
+Synthesizing Unit <rom>.
+    Related source file is "../rom.v".
+WARNING:Xst:1781 - Signal <mem> is used but never assigned. Tied to default value.
+    Found 2048x16-bit ROM for signal <$varindex0000> created at line 12.
+    Found 16-bit register for signal <dato_rom>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <rom> synthesized.
+
+
+Synthesizing Unit <acumulador>.
+    Related source file is "../acumulador.v".
+    Found 11-bit up accumulator for signal <temp>.
+    Summary:
+	inferred   1 Accumulator(s).
+Unit <acumulador> synthesized.
+
+
+Synthesizing Unit <comp>.
+    Related source file is "../comp.v".
+Unit <comp> synthesized.
+
+
+Synthesizing Unit <lslA>.
+    Related source file is "../lslA.v".
+    Found 11-bit register for signal <tmp>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <lslA> synthesized.
+
+
+Synthesizing Unit <lsrB>.
+    Related source file is "../lsrB.v".
+    Found 5-bit register for signal <tmp>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <lsrB> synthesized.
+
+
+Synthesizing Unit <control>.
+    Related source file is "../control.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 17 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <current_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 17 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 17 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 17 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 17 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 5-bit register for signal <current_state>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <control> synthesized.
+
+
+Synthesizing Unit <top_RAM>.
+    Related source file is "../top_RAM.v".
+Unit <top_RAM> synthesized.
+
+
+Synthesizing Unit <top_multiplicador>.
+    Related source file is "../top_multiplicador.v".
+Unit <top_multiplicador> synthesized.
+
+
+Synthesizing Unit <top_ASCCI>.
+    Related source file is "../top_ASCCI.v".
+WARNING:Xst:1780 - Signal <wram> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <top_ASCCI> synthesized.
+
+
+Synthesizing Unit <top_leds>.
+    Related source file is "../top_leds.v".
+WARNING:Xst:1780 - Signal <leer_ram> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <top_leds> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <ef2> of the block <top_efect2> are unconnected in block <top_leds>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <ef1> of the block <top_efect1> are unconnected in block <top_leds>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <ef4> of the block <top_efect4> are unconnected in block <top_leds>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <ef5> of the block <top_efect5> are unconnected in block <top_leds>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x16-bit single-port RAM                            : 1
+# ROMs                                                 : 1
+ 2048x16-bit ROM                                       : 1
+# Adders/Subtractors                                   : 2
+ 11-bit adder carry out                                : 1
+ 11-bit subtractor                                     : 1
+# Counters                                             : 8
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 4
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 11-bit up accumulator                                 : 1
+# Registers                                            : 13
+ 1-bit register                                        : 3
+ 11-bit register                                       : 3
+ 16-bit register                                       : 3
+ 5-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 4-bit comparator less                                 : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <comb> is unconnected in block <trm>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <seled> is unconnected in block <top_leds>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <current_state_6> in Unit <contr> is equivalent to the following FF/Latch, which will be removed : <current_state_7> 
+WARNING:Xst:1710 - FF/Latch <current_state_0> (without init value) has a constant value of 0 in block <contr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <current_state_6> (without init value) has a constant value of 0 in block <contr>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <datoram>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wram>          | low      |
+    |     addrA          | connected to signal <direccionram>  |          |
+    |     diA            | connected to signal <datorom>       |          |
+    |     doA            | connected to signal <datoram>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rom>.
+INFO:Xst:3016 - Currently unable to implement the ROM <Mrom__varindex0000> as a read-only block RAM. Please look for coming software updates.
+Unit <rom> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x16-bit single-port block RAM                      : 1
+# ROMs                                                 : 1
+ 2048x16-bit ROM                                       : 1
+# Adders/Subtractors                                   : 2
+ 11-bit adder carry out                                : 1
+ 11-bit subtractor                                     : 1
+# Counters                                             : 8
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 4
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 11-bit up accumulator                                 : 1
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 4-bit comparator less                                 : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <current_state_0> (without init value) has a constant value of 0 in block <control_leer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <current_state_6> (without init value) has a constant value of 0 in block <control_leer>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <top_leds> ...
+
+Optimizing unit <impresion> ...
+
+Optimizing unit <control_leer> ...
+
+Optimizing unit <control_ascci> ...
+
+Optimizing unit <dir_ascci> ...
+
+Optimizing unit <rom> ...
+
+Optimizing unit <lslA> ...
+
+Optimizing unit <control> ...
+
+Optimizing unit <top_RAM> ...
+
+Optimizing unit <top_ASCCI> ...
+WARNING:Xst:1710 - FF/Latch <trm/contr/current_state_7> (without init value) has a constant value of 0 in block <top_leds>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 150
+ Flip-Flops                                            : 150
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : project.ngr
+Top Level Output File Name         : project.ngc
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 1233
+#      GND                         : 1
+#      INV                         : 14
+#      LUT1                        : 40
+#      LUT2                        : 69
+#      LUT3                        : 261
+#      LUT4                        : 402
+#      MUXCY                       : 56
+#      MUXF5                       : 253
+#      MUXF6                       : 65
+#      MUXF7                       : 9
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 150
+#      FD                          : 22
+#      FD_1                        : 11
+#      FDC                         : 1
+#      FDCE                        : 9
+#      FDE                         : 27
+#      FDE_1                       : 1
+#      FDR                         : 27
+#      FDRE                        : 42
+#      FDRS                        : 2
+#      FDS_1                       : 4
+#      FDSE                        : 2
+#      FDSE_1                      : 2
+# RAMS                             : 1
+#      RAMB16_S18                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 1
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      441  out of   4656     9%  
+ Number of Slice Flip Flops:            150  out of   9312     1%  
+ Number of 4 input LUTs:                786  out of   9312     8%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+clk                                | BUFGP                    | 130   |
+trm/div_fr/clk_out                 | NONE(trm/recol/col_7)    | 10    |
+TASCC/mult/control1/current_state_4| NONE(TASCC/dirasc/temp_0)| 11    |
+-----------------------------------+--------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------+------------------------+-------+
+Control Signal                                        | Buffer(FF name)        | Load  |
+------------------------------------------------------+------------------------+-------+
+trm/contr/current_state_1(trm/contr/current_state_1:Q)| NONE(trm/recol/col_0)  | 9     |
+trm/reset_new(trm/contr/reset_new1:O)                 | NONE(trm/recol/new_col)| 1     |
+------------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.343ns (Maximum Frequency: 107.035MHz)
+   Minimum input arrival time before clock: 2.506ns
+   Maximum output required time after clock: 6.985ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.343ns (frequency: 107.035MHz)
+  Total number of paths / destination ports: 5215 / 300
+-------------------------------------------------------------------------
+Delay:               9.343ns (Levels of Logic = 9)
+  Source:            TASCC/dirasc/dir_rom_0 (FF)
+  Destination:       TASCC/ro/dato_rom_11 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: TASCC/dirasc/dir_rom_0 to TASCC/ro/dato_rom_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.514   1.225  TASCC/dirasc/dir_rom_0 (TASCC/dirasc/dir_rom_0)
+     LUT4:I0->O           25   0.612   1.101  TASCC/ro/Mrom__varindex00001251 (TASCC/ro/Mrom__varindex0000125)
+     LUT3:I2->O            6   0.612   0.572  TASCC/ro/Mrom__varindex0000881_17 (TASCC/ro/Mrom__varindex00001151_17)
+     LUT4:I3->O            1   0.612   0.387  TASCC/ro/Mrom__varindex00002771_14_f5 (TASCC/ro/Mrom__varindex00002771_14_f5)
+     LUT3:I2->O            1   0.612   0.000  TASCC/ro/Mrom__varindex00002771_10_f5_0_G (N140)
+     MUXF5:I1->O           1   0.278   0.387  TASCC/ro/Mrom__varindex00002771_10_f5_0 (TASCC/ro/Mrom__varindex00002771_10_f51)
+     LUT3:I2->O            1   0.612   0.000  TASCC/ro/Mrom__varindex00002771_5_f5_F (N129)
+     MUXF5:I0->O           2   0.278   0.383  TASCC/ro/Mrom__varindex00002771_5_f5 (TASCC/ro/Mrom__varindex00002771_5_f5)
+     LUT4:I3->O            1   0.612   0.000  TASCC/ro/dir_rom<10>41 (TASCC/ro/dir_rom<10>4)
+     MUXF5:I1->O           1   0.278   0.000  TASCC/ro/dir_rom<10>4_f5 (TASCC/ro/N13)
+     FDR:D                     0.268          TASCC/ro/dato_rom_11
+    ----------------------------------------
+    Total                      9.343ns (5.288ns logic, 4.055ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'trm/div_fr/clk_out'
+  Clock period: 3.878ns (frequency: 257.881MHz)
+  Total number of paths / destination ports: 108 / 17
+-------------------------------------------------------------------------
+Delay:               3.878ns (Levels of Logic = 2)
+  Source:            trm/recol/col_3 (FF)
+  Destination:       trm/recol/col_7 (FF)
+  Source Clock:      trm/div_fr/clk_out rising
+  Destination Clock: trm/div_fr/clk_out rising
+
+  Data Path: trm/recol/col_3 to trm/recol/col_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.514   0.603  trm/recol/col_3 (trm/recol/col_3)
+     LUT4:I0->O            2   0.612   0.410  trm/recol/col_cmp_lt0000112 (trm/recol/col_cmp_lt0000112)
+     LUT4:I2->O            8   0.612   0.643  trm/recol/col_cmp_lt0000141 (trm/recol/col_cmp_lt0000)
+     FDCE:CE                   0.483          trm/recol/col_0
+    ----------------------------------------
+    Total                      3.878ns (2.221ns logic, 1.657ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.506ns (Levels of Logic = 2)
+  Source:            run (PAD)
+  Destination:       TASCC/contrascc/current_state_7 (FF)
+  Destination Clock: clk falling
+
+  Data Path: run to TASCC/contrascc/current_state_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.520  run_IBUF (run_IBUF)
+     LUT2:I1->O            1   0.612   0.000  TASCC/contrascc/next_state<7>1 (TASCC/contrascc/next_state<7>)
+     FD_1:D                    0.268          TASCC/contrascc/current_state_7
+    ----------------------------------------
+    Total                      2.506ns (1.986ns logic, 0.520ns route)
+                                       (79.2% logic, 20.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 144 / 16
+-------------------------------------------------------------------------
+Offset:              6.985ns (Levels of Logic = 3)
+  Source:            trm/imp/con_tem_1 (FF)
+  Destination:       ledsOut<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: trm/imp/con_tem_1 to ledsOut<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.690  trm/imp/con_tem_1 (trm/imp/con_tem_1)
+     LUT4:I0->O           16   0.612   1.031  trm/imp/ledsOut_cmp_eq0000426 (trm/imp/ledsOut_cmp_eq0000426)
+     LUT3:I0->O            1   0.612   0.357  trm/imp/ledsOut<9>1 (ledsOut_9_OBUF)
+     OBUF:I->O                 3.169          ledsOut_9_OBUF (ledsOut<9>)
+    ----------------------------------------
+    Total                      6.985ns (4.907ns logic, 2.078ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 32.91 secs
+ 
+--> 
+
+
+Total memory usage is 177124 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :   35 (   0 filtered)
+

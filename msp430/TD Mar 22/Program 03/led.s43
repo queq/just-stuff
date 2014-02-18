@@ -1,0 +1,53 @@
+#include "msp430F2122.h"                 
+
+;
+; This is a basic template for the MSP430(F2122).  
+;
+
+RESET   EQU     0FFFEh
+RAM     EQU     00200h
+FLASH   EQU     0F000h
+
+        ORG     RESET
+        DC16    init                    ; Set reset vector to 'init' label
+        
+        ORG     RAM
+        
+        ; <declare global variables here>
+        
+i:      DS8 2        
+        
+        ORG     FLASH
+
+init:   mov     #400h, SP               ; Set up stack pointer
+        mov     #WDTPW+WDTHOLD,&WDTCTL  ; Stop watchdog timer
+        
+        mov.b   &CALBC1_1MHZ,&BCSCTL1   ; Set range  (1 Mhz)
+        mov.b   &CALDCO_1MHZ,&DCOCTL    ; Set DCO step + modulation     
+        
+main:   ; <insert program code here>
+
+        bic.b   #0x1, &P1OUT            ; Al iniciar LED OFF
+        bis.b   #0x7, &P1DIR
+
+        main_10:                        ; Inicio ciclo
+
+            xor.b   #0x1, &P1OUT        ; Cambiar Estado del LED  
+
+            mov.w   #0xc350, &i         ; Inicio Delay 1/2 segundo
+            ;mov.w   #50000, &i
+          
+            main_20:
+                 
+                add.w   #0xffff, &i     
+                ;add.w   #-1, &i   
+                cmp.w   #0x0, &i
+ 
+            jne     main_20            ; Fin Delay 1/2 segundo   
+                
+        jmp main_10                    ; Repetir ciclo
+        
+        jmp     $                      ; Loop forever
+                
+        END
+
